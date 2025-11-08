@@ -1,13 +1,13 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+
 
 int main()
 {
     int arr[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     int n;
     int low = 0, high = 8, mid;
-    cout<< ("Enter the number to be searched: ");
-    cin >> n;
+    printf("Enter the number to be searched: ");
+   scanf("%d", &n);
 
     while (low <= high)
     {
@@ -15,7 +15,7 @@ int main()
 
         if (arr[mid] == n)
         {
-            cout<< ("Element found at index %d\n", mid);
+            printf("Element found at index %d\n", mid);
             return 0;
         }
         else if (arr[mid] < n)
@@ -28,6 +28,6 @@ int main()
         }
     }
 
-    cout<< ("Element not found\n");
+    printf("Element not found\n");
     return 0;
 }
